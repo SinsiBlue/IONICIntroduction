@@ -1,0 +1,18 @@
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>destination</th>
+      <th>départ</th>
+      <th>quai</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let destination of destinations">
+      <td>{{ destination.station }}</td>
+      <td>{{ destination.time | date:'HH:mm'}}</td>
+      <td>
+        <ion-icon name="cloudy"></ion-icon>
+      </td>
+    </tr>
+  </tbody>
+</table>

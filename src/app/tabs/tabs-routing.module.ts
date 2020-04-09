@@ -38,6 +38,26 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'meteo',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('./pages/meteo/meteo.module').then(m => m.MeteoPageModule)
+          }
+        ]
+      },
+      {
+        path: 'train',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('./pages/train/train.module').then(m => m.TrainPageModule)
+          }
+        ]
+      },
+      {
         path: '',
         redirectTo: '/tabs/tab1',
         pathMatch: 'full'
@@ -48,6 +68,14 @@ const routes: Routes = [
     path: '',
     redirectTo: '/tabs/tab1',
     pathMatch: 'full'
+  },
+  {
+    path: 'meteo',
+    loadChildren: () => import('./pages/meteo/meteo.module').then( m => m.MeteoPageModule)
+  },
+  {
+    path: 'train',
+    loadChildren: () => import('./pages/train/train.module').then( m => m.TrainPageModule)
   }
 ];
 

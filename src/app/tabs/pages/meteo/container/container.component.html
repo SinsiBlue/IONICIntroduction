@@ -1,0 +1,18 @@
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>jour</th>
+      <th>°C</th>
+      <th>temps</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let jour of prochainsJours">
+      <td>{{ jour }}</td>
+      <td></td>
+      <td>
+        <ion-icon *ngIf="jour =='lundi'" name="cloudy"></ion-icon>
+      </td>
+    </tr>
+  </tbody>
+</table>
